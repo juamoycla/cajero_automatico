@@ -34,6 +34,7 @@ public class app {
                         saldo = retirarDinero(saldo, cantidad);
                         if (saldo == 0) { cantidad = 0; }
                     }
+                    cantidad = 1;
                     break;
                 case 0:
                     System.out.println("Saliendo...");
@@ -80,9 +81,8 @@ public class app {
 /* BUGS:
 1- Al ingresar, si se introducia num negativo restava dinero (+ x - = -).
 2- Al retirar, si se introducia num negativo ingresava dinero (- x - = +).
-3- Metodo reciclado retirarDinero para usarlo en las retiradas recursivas.
+3- Metodo reciclado retirarDinero para usarlo en las retiradas recursivas (4).
 4- Al retirar sin parar (4) si por ejemplo retiramos 2 veces 200 y ponemos 0, si entramos de nuevo
 en la misma opcion no deja entrar y se sale porque cantidad vale 0, si entramos en otra
 opcion si se puede porque modificamos cantidad, la culpa el while.
-
  */
